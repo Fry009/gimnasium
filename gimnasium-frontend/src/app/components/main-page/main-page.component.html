@@ -1,0 +1,11 @@
+<div style="padding: 1rem">
+  <button mat-icon-button (click)="toggleLayout()" aria-label="Mostrar menú">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <ng-container *ngIf="showLayout">
+    <app-main-layout>
+      <app-activity-cards></app-activity-cards>
+    </app-main-layout>
+  </ng-container>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Buscar actividad</mat-label>
+    <input matInput [(ngModel)]="searchTerm" placeholder="Ej: yoga, zumba" />
+  </mat-form-field>
+
+  <div class="card-grid">
+    <mat-card class="activity-card" *ngFor="let activity of filteredActivities">
+      <mat-card-title>{{ activity.name }}</mat-card-title>
+      <mat-card-content>{{ activity.description }}</mat-card-content>
+    </mat-card>
+  </div>
+</div>
